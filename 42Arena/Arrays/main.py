@@ -24,7 +24,7 @@ def twoNumberSum(array, targetSum):
 Imkon qadar kamroq amal bajaring.
 Qo'shimcha xotiradan foydalanmang - 
 amallarni ro'yxat ustida bajaring.
-"""
+
 
 def moveZeroes(nums: list) -> list:
     non_zero_pos = 0
@@ -37,4 +37,27 @@ def moveZeroes(nums: list) -> list:
     for i in range(non_zero_pos, len(nums)):
         nums[i] = 0
 
-    return nums
+    return nums 
+"""
+
+"""
+3.Ikkita butun sonlardan iborat array beriladi. 
+Ikkinchi array birinchining ketma-ket qismi ekanini aniqlovchi
+ funksiya yozing.
+Ketma-ket qism — bu elementlari tartib bilan uchraydigan, 
+lekin yonma-yon bo‘lishi shart bo‘lmagan qator.
+Masalan, [1, 3, 4] sonlari [1, 2, 3, 4] arrayining ketma-ket 
+qismi hisoblanadi, [2, 4] ham shunday. Shuningdek, 
+bitta son yoki arrayning o‘zi ham ketma-ket qism bo‘lishi mumkin.
+"""
+
+def isValidSubsequence(array, sequence):
+    seq_index = 0
+
+    for num in array:
+        if seq_index < len(sequence) and num == sequence[seq_index]:
+            seq_index += 1
+        if seq_index == len(sequence):
+            return True
+
+    return seq_index == len(sequence)
