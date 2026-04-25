@@ -11,6 +11,3 @@ def isPalindrome(string: str) -> bool:
       return True
     else:
       return False
-if __name__ == "__main__":
-  text = input("Enter a word: ")
-  print(isPalindrome(text))
